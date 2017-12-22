@@ -106,7 +106,7 @@ nav {
         -moz-transition: margin .1s ease-in-out, width .2s  ease-in-out;
           -o-transition: margin .1s ease-in-out, width .2s  ease-in-out;
             transition: margin .1s ease-in-out, width .2s  ease-in-out;
-      width: 83%;
+      width: 78%;
       margin: 20px 0 0 24px;
     }
   }
@@ -166,6 +166,9 @@ nav {
           -ms-transition: left 1s linear;
             -o-transition: left 1s linear;
               transition:left 1s linear;
+        &#fullscreenmenu-inner {
+          top: 18px;
+        }
     }
   }
   ul {
@@ -192,9 +195,17 @@ nav {
         font-weight: 100;
         text-transform: uppercase;
         line-height: 150%;
+        display: block;
         i {
           float: right;
           color: #ec008c;
+        }
+      }
+      &.show {
+        a i {
+          &:before {
+            content: '\f077';
+          }
         }
       }
       ul {
@@ -207,6 +218,7 @@ nav {
               -o-transition: max-height 1s;
                 transition: max-height 1s;
         max-height: 0;
+        margin-top: 14px;
         li  {
           a {
             font-family: "Galaxie", serif;
