@@ -1,0 +1,34 @@
+{
+  "name": "NavExercise",
+  "description": "Exercise for candidates to complete where they will build a responsive nav driven from json",
+  "version": "0.1.1",
+  "authors": [
+    "Wes Hatch <whatch@hugeinc.com>",
+    "Karl Stanton <kstanton@hugeinc.com>"
+  ],
+  "license": "© 2016 Huge. All Rights Reserved.",
+  "homepage": "https://github.com/hugeinc/NavExercise",
+  "bugs": {
+    "url": "https://github.com/hugeinc/NavExercise/issues"
+  },
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www sass-compile",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true sass/ -o public/styles/",
+    "build-task:autoprefixer": "postcss public/styles/*.css --use autoprefixer -d public/styles",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'sass/**/*.scss' -c 'npm run sass:build'",
+    "sass-compile": "npm-run-all -p sass:*"
+  },
+  "dependencies": {
+    "express": "~4.2.0",
+    "morgan": "~1.0.0",
+    "autoprefixer": "^7.2.1",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "^0.0.3",
+    "nodemon": "^1.11.0",
+    "postcss-cli": "^4.1.1",
+    "npm-run-all": "^4.1.2"
+  }
+}

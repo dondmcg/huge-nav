@@ -1,0 +1,40 @@
+.icon-chevron-down:before {
+  content: "\f078";
+  font-family: 'huge' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+  margin: 0;
+  &.noscroll {
+    overflow:hidden;
+  }
+}
+
+a {
+  color: #000;
+  &:hover {
+    color: #ec008c;
+  }
+}
+
+@media ( min-width: 768px ) {
+  body {
+    min-width: 992px;
+  }
+}
